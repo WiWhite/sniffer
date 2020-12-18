@@ -14,7 +14,6 @@ def main():
               f'{src_mac}, Protocol: {eth_proto}')
 
 
-
 def ethernet_frame(data):
     dst_mac, src_mac, proto = struct.unpack('! 6s 6s H', data[:14])
     return get_mac_addr(dst_mac), get_mac_addr(src_mac), socket.htons(
